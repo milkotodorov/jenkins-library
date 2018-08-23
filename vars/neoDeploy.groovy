@@ -103,8 +103,8 @@ def call(parameters = [:]) {
         def vmSize
 
         def deployModes = ['mta', 'warParams', 'warPropertiesFile']
-        if (deployMode != 'mta' && deployMode != 'warParams' && deployMode != 'warPropertiesFile') {
-//        if (! (deployMode in deployModes)) {
+        //if (deployMode != 'mta' && deployMode != 'warParams' && deployMode != 'warPropertiesFile') {
+        if (! (deployMode in deployModes)) {
             throw new Exception("[neoDeploy] Invalid deployMode = '${deployMode}'. Valid 'deployMode' values are: ${deployModes}.")
         }
 
